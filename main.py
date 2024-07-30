@@ -5,7 +5,7 @@ def extract_birds(message: str) -> list[str]:
     if not isinstance(message, str):
         raise TypeError("Message must be str")
     for char in message:
-        if char in string.punctuation:
+        if not char.isalpha():
             message = message.replace(char, " ")
     return message.split()
 
