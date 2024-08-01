@@ -1,6 +1,3 @@
-import string
-
-
 def extract_birds(message: str) -> list[str]:
     if not isinstance(message, str):
         raise TypeError("Message must be str")
